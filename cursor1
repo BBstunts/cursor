@@ -438,7 +438,7 @@ local Cursor = create("ImageLabel", {
     Rotation = -90,
 })
 
--- default roblox cursor ON
+-- NORMAL ROBLOX CURSOR DEFAULT
 UserInputService.MouseIconEnabled = true
 
 -- toggle
@@ -448,7 +448,7 @@ local function setCursor(state)
     UserInputService.MouseIconEnabled = not state
 end
 
--- smooth follow (ORIGINAL VALKYRIE LOGIC)
+-- smooth follow
 local currentPos = Vector2.new(0,0)
 
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -762,7 +762,7 @@ end)
 	controlsSection:AddTextbox("Launcher Text", tostring(launcherText), function(text)
 		window:SetLauncherText(text)
 	end)
-    local cursorSection = settingsPage:CreateSection("Cursor")
+local cursorSection = settingsPage:CreateSection("Cursor")
 
 cursorSection:AddToggle("Enable Custom Cursor", false, function(state)
     setCursor(state)
