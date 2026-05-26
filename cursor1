@@ -418,7 +418,7 @@ local pagesHolder = create("Frame", {
 		Parent = content,
 	})
 --// Cursor System
-local cursorEnabled = true
+local cursorEnabled = false
 local GuiService = game:GetService("GuiService")
 
 -- IMPORTANT: match coordinate space
@@ -429,7 +429,7 @@ local Cursor = create("ImageLabel", {
     AnchorPoint = Vector2.new(0.5, 0.5),
     BackgroundTransparency = 1,
     Size = UDim2.fromOffset(16, 16),
-    Visible = true,
+    Visible = false,
     ZIndex = 9999,
     Parent = gui,
 
@@ -438,8 +438,8 @@ local Cursor = create("ImageLabel", {
     Rotation = -90,
 })
 
--- hide roblox cursor
-UserInputService.MouseIconEnabled = false
+-- default roblox cursor ON
+UserInputService.MouseIconEnabled = true
 
 -- toggle
 local function setCursor(state)
