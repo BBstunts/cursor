@@ -764,7 +764,7 @@ end)
 	end)
     local cursorSection = settingsPage:CreateSection("Cursor")
 
-cursorSection:AddToggle("Enable Custom Cursor", true, function(state)
+cursorSection:AddToggle("Enable Custom Cursor", false, function(state)
     setCursor(state)
 end)
 
